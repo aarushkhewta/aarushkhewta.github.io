@@ -6,163 +6,212 @@
 <title>Aarush Khewta | Portfolio</title>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #020617);
-    color: white;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+  scroll-behavior: smooth;
 }
 
-header {
-    text-align: center;
-    padding: 60px 20px;
+/* NAVBAR */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
 }
 
-h1 {
-    font-size: 48px;
-    margin: 10px;
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
 }
 
-.subtitle {
-    color: #94a3b8;
-    font-size: 18px;
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  animation: fadeIn 1.5s ease;
+}
+
+.hero img {
+  width: 140px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #38bdf8;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  color: #94a3b8;
 }
 
 .btn {
-    margin-top: 15px;
-    display: inline-block;
-    padding: 12px 25px;
-    background: #38bdf8;
-    color: black;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 25px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.btn:hover {
-    background: #0ea5e9;
-}
-
+/* SECTION */
 section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
+/* CARDS */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .card {
-    background: rgba(30, 41, 59, 0.8);
-    padding: 20px;
-    border-radius: 12px;
-    transition: 0.3s;
-    backdrop-filter: blur(10px);
+  background: rgba(30, 41, 59, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
 h2 {
-    color: #38bdf8;
+  margin-bottom: 10px;
+  color: #38bdf8;
 }
 
-ul {
-    padding-left: 20px;
+/* SKILL TAGS */
+.skills span {
+  display: inline-block;
+  background: #1e293b;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 6px;
 }
 
+/* FOOTER */
 footer {
-    text-align: center;
-    padding: 30px;
-    color: #94a3b8;
+  text-align: center;
+  padding: 30px;
+  color: #94a3b8;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1;}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Aarush Khewta</h1>
-    <p class="subtitle">Computer Science Student | ML Enthusiast | Developer</p>
-    <a class="btn" href="resume.pdf" download>Download Resume</a>
-</header>
+<!-- NAVBAR -->
+<nav>
+  <div><b>Aarush</b></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-<section class="grid">
+<!-- HERO -->
+<div class="hero">
+  <img src="profile.jpg" alt="profile">
+  <h1>Aarush Khewta</h1>
+  <p>Computer Science Student | ML Enthusiast</p>
+  <a class="btn" href="resume.pdf" download>Download Resume</a>
+</div>
 
-<div class="card">
-    <h2>👨‍💻 About Me</h2>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
     <p>
-        I am a 2nd-year Computer Science Engineering student at Chitkara University 
-        with a CGPA of 8.55. I have strong fundamentals in programming and a deep 
-        interest in Machine Learning and real-world problem solving.
+      I am a 2nd-year Computer Science Engineering student with strong skills 
+      in C, C++, Python, and web technologies. I am passionate about Machine Learning 
+      and building impactful real-world projects.
     </p>
-</div>
+  </div>
+</section>
 
-<div class="card">
-    <h2>🎓 Education</h2>
-    <ul>
-        <li><b>B.E. CSE</b> - Chitkara University (2024–2028)</li>
-        <li>CGPA: 8.55</li>
-        <li><b>High School</b> - D.A.V. Public School</li>
-        <li>Percentage: 72.4%</li>
-    </ul>
-</div>
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card skills">
+    <span>C</span>
+    <span>C++</span>
+    <span>Python</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Machine Learning</span>
+    <span>Data Structures</span>
+  </div>
+</section>
 
-<div class="card">
-    <h2>🛠 Skills</h2>
-    <ul>
-        <li><b>Languages:</b> C, C++, Python</li>
-        <li><b>Frontend:</b> HTML, CSS, JavaScript</li>
-        <li><b>Tools:</b> MS Office (Word, Excel, PowerPoint)</li>
-        <li><b>Concepts:</b> Data Structures, ML Basics</li>
-    </ul>
-</div>
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
 
-<div class="card">
-    <h2>🚀 Projects</h2>
-    <ul>
-        <li><b>IoT Automatic Wiper System</b><br>
-        Built using rain sensor + Arduino UNO for vehicle automation</li>
+    <div class="card">
+      <h3>IoT Automatic Wiper</h3>
+      <p>Rain sensor-based automatic vehicle wiper using Arduino UNO.</p>
+    </div>
 
-        <li><b>ML Privacy Research Paper</b><br>
-        Worked on privacy-preserving ML techniques (in progress)</li>
+    <div class="card">
+      <h3>ML Privacy Research</h3>
+      <p>Research on privacy-preserving machine learning (in progress).</p>
+    </div>
 
-        <li><b>Portfolio Website</b><br>
-        Created using HTML, CSS & JavaScript</li>
-    </ul>
-</div>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Responsive portfolio built using HTML, CSS, JavaScript.</p>
+    </div>
 
-<div class="card">
-    <h2>💡 Soft Skills</h2>
-    <ul>
-        <li>Time Management</li>
-        <li>Teamwork</li>
-        <li>Leadership</li>
-        <li>Creativity</li>
-    </ul>
-</div>
+  </div>
+</section>
 
-<div class="card">
-    <h2>📬 Contact</h2>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
     <p>Email: aarush1006.be24@chitkarauniversity.edu.in</p>
     <p>Phone: +91 7018037680</p>
-    <p>Location: Shimla, Himachal Pradesh</p>
-    <p>
-        <a href="https://www.linkedin.com/in/aarushkhewta" target="_blank" style="color:#38bdf8;">
-        LinkedIn Profile
-        </a>
-    </p>
-</div>
-
+    <p>LinkedIn: linkedin.com/in/aarushkhewta</p>
+  </div>
 </section>
 
 <footer>
-    © 2026 Aarush Khewta | Built with GitHub Pages
+  © 2026 Aarush Khewta
 </footer>
 
 </body>
