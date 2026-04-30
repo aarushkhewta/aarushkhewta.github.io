@@ -6,35 +6,27 @@
 <title>Aarush Khewta | Portfolio</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
 body {
-  background: linear-gradient(135deg, #020617, #0f172a);
-  color: white;
-  scroll-behavior: smooth;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.6;
 }
 
 /* NAVBAR */
 nav {
-  position: sticky;
-  top: 0;
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(10px);
-  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
-  z-index: 1000;
+  padding: 15px 40px;
+  background: #020617;
+  border-bottom: 1px solid #1e293b;
 }
 
 nav a {
-  color: white;
+  color: #cbd5f5;
   text-decoration: none;
-  margin: 0 15px;
+  margin-left: 20px;
 }
 
 nav a:hover {
@@ -44,87 +36,69 @@ nav a:hover {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 80px 20px;
-  animation: fadeIn 1.5s ease;
-}
-
-.hero img {
-  width: 140px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  border: 3px solid #38bdf8;
+  padding: 60px 20px;
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 42px;
+  margin-bottom: 10px;
 }
 
 .hero p {
   color: #94a3b8;
+  margin-bottom: 20px;
 }
 
 .btn {
-  margin-top: 20px;
-  display: inline-block;
-  padding: 12px 25px;
+  padding: 10px 20px;
   background: #38bdf8;
   color: black;
-  border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
+  border-radius: 6px;
 }
 
 /* SECTION */
 section {
-  max-width: 1100px;
+  max-width: 900px;
   margin: auto;
-  padding: 40px 20px;
-}
-
-/* CARDS */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: rgba(30, 41, 59, 0.7);
-  padding: 20px;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px);
+  padding: 30px 20px;
 }
 
 h2 {
-  margin-bottom: 10px;
+  border-bottom: 2px solid #1e293b;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
   color: #38bdf8;
 }
 
-/* SKILL TAGS */
+/* CARDS */
+.card {
+  background: #020617;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #1e293b;
+}
+
+/* PROJECT LIST */
+.project {
+  margin-bottom: 15px;
+}
+
+/* SKILLS */
 .skills span {
   display: inline-block;
-  background: #1e293b;
-  padding: 8px 12px;
   margin: 5px;
-  border-radius: 6px;
+  padding: 6px 12px;
+  background: #1e293b;
+  border-radius: 5px;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 20px;
   color: #94a3b8;
-}
-
-/* ANIMATION */
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1;}
 }
 </style>
 </head>
@@ -133,7 +107,7 @@ footer {
 
 <!-- NAVBAR -->
 <nav>
-  <div><b>Aarush</b></div>
+  <div><b>Aarush Khewta</b></div>
   <div>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -144,20 +118,19 @@ footer {
 
 <!-- HERO -->
 <div class="hero">
-  <img src="profile.jpg" alt="profile">
   <h1>Aarush Khewta</h1>
-  <p>Computer Science Student | ML Enthusiast</p>
+  <p>Computer Science Engineering Student | ML Enthusiast</p>
   <a class="btn" href="resume.pdf" download>Download Resume</a>
 </div>
 
 <!-- ABOUT -->
 <section id="about">
-  <h2>About Me</h2>
+  <h2>About</h2>
   <div class="card">
     <p>
-      I am a 2nd-year Computer Science Engineering student with strong skills 
-      in C, C++, Python, and web technologies. I am passionate about Machine Learning 
-      and building impactful real-world projects.
+      I am a 2nd-year Computer Science Engineering student at Chitkara University 
+      with a CGPA of 8.55. I have strong programming skills in C, C++, and Python 
+      and a keen interest in Machine Learning and real-world problem solving.
     </p>
   </div>
 </section>
@@ -180,24 +153,28 @@ footer {
 <!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
-  <div class="grid">
 
-    <div class="card">
-      <h3>IoT Automatic Wiper</h3>
-      <p>Rain sensor-based automatic vehicle wiper using Arduino UNO.</p>
-    </div>
-
-    <div class="card">
-      <h3>ML Privacy Research</h3>
-      <p>Research on privacy-preserving machine learning.</p>
-    </div>
-
-    <div class="card">
-      <h3>Portfolio Website</h3>
-      <p>Responsive portfolio built using HTML, CSS, JavaScript.</p>
-    </div>
-
+  <div class="card project">
+    <h3>IoT Automatic Wiper System</h3>
+    <p>
+      Developed an automatic vehicle wiper system using rain sensors and Arduino UNO.
+    </p>
   </div>
+
+  <div class="card project">
+    <h3>Privacy-Preserving ML Research</h3>
+    <p>
+      Worked on a research paper focused on privacy-preserving machine learning techniques.
+    </p>
+  </div>
+
+  <div class="card project">
+    <h3>Portfolio Website</h3>
+    <p>
+      Designed and developed a responsive personal portfolio using HTML, CSS, and JavaScript.
+    </p>
+  </div>
+
 </section>
 
 <!-- CONTACT -->
